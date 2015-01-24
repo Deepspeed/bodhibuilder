@@ -1,8 +1,8 @@
 [Plymouth Theme]
-Name=__THEMENAME__
-Description=This theme is the __THEMENAME__ Plymouth Theme
+Name=Enriki theme
+Description=Enriki theme
 ModuleName=script
 
 [script]
-ImageDir=/lib/plymouth/themes/__THEMEDIR__
-ScriptFile=/lib/plymouth/themes/__THEMEDIR__/__THEMEDIR__.script
+ImageDir=/lib/plymouth/themes/Enriki-theme
+ScriptFile=/lib/plymouth/themes/Enriki-theme/mdv.script

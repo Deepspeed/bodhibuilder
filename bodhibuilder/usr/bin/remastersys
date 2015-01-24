@@ -547,13 +547,13 @@ FOO
     mkinitramfs -o /boot/initrd.img-`uname -r` `uname -r`
 
     log_msg "Copying your kernel and initrd for the livecd"
-    cp /boot/vmlinuz-`uname -r` $WORKDIR/ISOTMP/casper/vmlinuz
-    cp /boot/initrd.img-`uname -r` $WORKDIR/ISOTMP/casper/initrd.gz
-    if [ ! -f $WORKDIR/ISOTMP/casper/vmlinuz ]; then
+    cp /boot/vmlinuz-`uname -r` $WORKDIR/ISOTMP/casper/vmlinuz.lz
+    cp /boot/initrd.img-`uname -r` $WORKDIR/ISOTMP/casper/initrd.efi
+    if [ ! -f $WORKDIR/ISOTMP/casper/vmlinuz.lz ]; then
         log_msg "Missing valid kernel. Exiting"
         exit 1
     fi
-    if [ ! -f $WORKDIR/ISOTMP/casper/initrd.gz ]; then
+    if [ ! -f $WORKDIR/ISOTMP/casper/initrd.efi ]; then
         log_msg "Missing valid initial ramdisk. Exiting"
         exit 1
     fi
