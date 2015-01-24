@@ -294,7 +294,6 @@ log_msg "$WORKDIR is on a $DIRTYPE filesystem"
     rm -f $WORKDIR/dummysys/etc/cups/ssl/{server.crt,server.key}
     rm -f $WORKDIR/dummysys/etc/ssh/*key*
     rm -f $WORKDIR/dummysys/var/lib/dbus/machine-id
-    rm -f $WORKDIR/dummysys/etc/init/tty?.conf
     rsync -a /dev/urandom $WORKDIR/dummysys/dev/
     find $WORKDIR/dummysys/var/log/ $WORKDIR/dummysys/var/lock/ $WORKDIR/dummysys/var/backups/ $WORKDIR/dummysys/var/tmp/ $WORKDIR/dummysys/var/crash/ $WORKDIR/dummysys/var/lib/ubiquity/ -type f -exec rm -f {} \;
 
