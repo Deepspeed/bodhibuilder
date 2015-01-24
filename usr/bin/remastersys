@@ -383,6 +383,16 @@ log_msg "$WORKDIR is on a $DIRTYPE filesystem"
 
     # copy over some of the necessary stuff for the livecd
 
+    #check if system has UEFI data to move over
+    if [ ! -d /etc/remastersys/uefi=""]; then
+        log_msg "Moving all EFI files to the ISOTMP folder"
+        mv /etc/remastersys/uefi/* $WORKDIR/ISOTMP/
+        # delete the uefi folder from the system
+        rm -rf $WORKDIR/dummysys/uefi
+    else
+        log_msg "No UEFI folder found"	
+    fi
+
     #copy any preseed files
     cp /etc/remastersys/preseed/* $WORKDIR/ISOTMP/preseed/
 
@@ -577,7 +587,7 @@ FOO
 
     fi
 
-    mksquashfs $REALFOLDERS $WORKDIR/ISOTMP/casper/filesystem.squashfs -no-duplicates $SQUASHFSOPTS -e root/.local/Trash root/.thumbnails root/.cache root/.bash_history root/.lesshst root/.nano_history boot/grub $BASEWORKDIR $EXCLUDES 2>>$WORKDIR/remastersys.log
+    mksquashfs $REALFOLDERS $WORKDIR/ISOTMP/casper/filesystem.squashfs -no-duplicates $SQUASHFSOPTS -comp xz -e root/.local/Trash root/.thumbnails root/.cache root/.bash_history root/.lesshst root/.nano_history boot/grub $BASEWORKDIR $EXCLUDES 2>>$WORKDIR/remastersys.log
 
 
     sleep 1
