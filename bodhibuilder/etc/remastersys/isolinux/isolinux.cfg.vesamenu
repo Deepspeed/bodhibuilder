@@ -8,13 +8,13 @@ menu color title 1;37;44 #c0ffffff #00000000 std
 
 label live
   menu label live - boot the Live System
-  kernel /casper/vmlinuz
-  append  file=/cdrom/preseed/custom.seed boot=casper initrd=/casper/initrd.gz quiet splash --
+  kernel /casper/vmlinuz.lz
+  append  file=/cdrom/preseed/custom.seed boot=casper initrd=/casper/initrd.efi quiet splash --
 
 label xforcevesa
   menu label xforcevesa - boot Live in safe graphics mode
-  kernel /casper/vmlinuz
-  append  file=/cdrom/preseed/custom.seed boot=casper nomodeset xforcevesa initrd=/casper/initrd.gz quiet splash --
+  kernel /casper/vmlinuz.lz
+  append  file=/cdrom/preseed/custom.seed boot=casper nomodeset xforcevesa initrd=/casper/initrd.efi quiet splash --
 
 label memtest
   menu label memtest - Run memtest
@@ -23,8 +23,8 @@ label memtest
   
 label check
   menu label check - check distro integrity
-  kernel /casper/vmlinuz
-  append  boot=casper integrity-check initrd=/casper/initrd.gz quiet splash --
+  kernel /casper/vmlinuz.lz
+  append  boot=casper integrity-check initrd=/casper/initrd.efi quiet splash --
 
 label hd
   menu label hd - boot the first hard disk
