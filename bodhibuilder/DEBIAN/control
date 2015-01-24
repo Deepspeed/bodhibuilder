@@ -1,5 +1,5 @@
 Package: bodhibuilder
-Version: 0.02
+Version: 0.03
 Section: main
 Priority: optional
 Depends: memtest86+, coreutils, dialog, mkisofs | genisoimage, findutils, bash, passwd, sed, squashfs-tools, casper, rsync, mount, eject, libdebian-installer4, os-prober, ubiquity-frontend-debconf, user-setup, discover1 | discover, laptop-detect, syslinux, util-linux, xresprobe, python, python-glade2, python-vte, plymouth-x11

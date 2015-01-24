@@ -386,8 +386,6 @@ log_msg "$WORKDIR is on a $DIRTYPE filesystem"
     if [ ! -d /etc/remastersys/uefi=""]; then
         log_msg "Moving all EFI files to the ISOTMP folder"
         mv /etc/remastersys/uefi/* $WORKDIR/ISOTMP/
-        # delete the uefi folder from the system
-        rm -rf $WORKDIR/dummysys/uefi
     else
         log_msg "No UEFI folder found"	
     fi
