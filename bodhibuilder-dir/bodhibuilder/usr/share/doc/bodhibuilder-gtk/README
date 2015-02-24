@@ -1,11 +1,18 @@
- Remastersys
+ Bodhibuilder
 
-- a script to create a livecd/dvd from a working Ubuntu or variant install
+- a script modified from Remastersys, which will now create a livecd/dvd 
+from a working Bodhi Linux install version 3.0.0 and up.
 
-For more information, please visit http://www.remastersys.klikit-linux.com and
+For more information, please visit http://forums.bodhilinux.com/ and
+feel free to ask questions, someone may be able to help you.
 
-the wiki at http://klikit.pbwiki.com/Remastersys
+Stace Fauske <stace.fauske@gmail.com> <-sef>
+Jeff Hoogland <JeffHoogland@Linux.com>
+Charles van de Beek <charles.beek@gmail.com> Charles@Bodhi
 
+
+COMMENTS FROM REMASTERSYS' ORIGINAL AUTHOR:
+(I cannot guarantee the authenticity of these comments toward bodhibuilder scripts -sef)
 
 Limitations of remastering
 ========================== 
